@@ -27,13 +27,17 @@ func main() {
 }
 
 func compareNumber(r, input int) string {
-	switch {
-	case input == r:
-		return "You have guessed!"
-	case input > r:
-		return "Too high!"
-	case input < r:
-		return "Too low!"
+	if r > -1 && r < 101 {
+		switch {
+		case input == r:
+			return "You have guessed!"
+		case input > r:
+			return "Too high!"
+		case input < r:
+			return "Too low!"
+		}
+	} else {
+		return "Out of range"
 	}
 
 	return "Something happened..."
