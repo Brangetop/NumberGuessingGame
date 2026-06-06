@@ -27,7 +27,7 @@ func main() {
 }
 
 func compareNumber(r, input int) string {
-	if r > -1 && r < 101 {
+	if r > -1 {
 		switch {
 		case input == r:
 			return "You have guessed!"
